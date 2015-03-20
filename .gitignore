@@ -1,0 +1,9 @@
+node_modules
+client/bower
+*.log
+*.iml
+.idea/*
+.DS_Store
+
+# Exclude project code style settings for idea
+!.idea/codeStyleSettings.xml
