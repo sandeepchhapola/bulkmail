@@ -4,16 +4,15 @@ var TextEditor = React.createClass({
         var _data = JSON.stringify({
             userData: this.props.data.userData,
             recieverEmails: this.props.data.recieverEmails,
+            mail_subject:$('#subject').val(),
             mailContent: $("#editor").html()
         });
-        console.log("Text Editor:", _data);
         $.ajax({
             url: "/sendemail",
             type: "post",
             data: {_data: _data},
             dataType: 'JSON'
         }).success(function (response) {
-            console.log("success", response);
             alert("success");
         }).error(function (error) {
             console.log("error", error);

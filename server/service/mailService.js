@@ -29,7 +29,7 @@ module.exports.sendMail = function (mailData) {
         mailOptions = {
             from: mailData.userData.email, // sender address
             to: _emailId, // receiver address
-            subject: 'Hello', // Subject line
+            subject: mailData.mail_subject, // Subject line
             html: mailData.mailContent // html body
         };
 
